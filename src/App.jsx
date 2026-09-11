@@ -1,8 +1,11 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 function App() {
   return (
     <div>
-      <h1>KeyPath</h1>
-      <p>Start your piano journey.</p>
+      <Navbar />
+      <Hero />
     </div>
   );
 }
