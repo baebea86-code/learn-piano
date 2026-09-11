@@ -2,7 +2,23 @@
   box-sizing: border-box;
 }
 
+:root {
+  --black: #0B0F0D;
+  --black-light: #121814;
+  --black-card: #18201B;
+  --black-soft: #202923;
+
+  --green: #1F6B45;
+  --green-light: #2F8F5B;
+
+  --text: #F2F5F2;
+  --text-muted: #A8B2AB;
+  --white: #FFFFFF;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: var(--black);
+  color: var(--text);
 }

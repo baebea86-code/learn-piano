@@ -1,12 +1,18 @@
+/* =========================
+   NAVBAR
+========================= */
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
+  background: var(--cream-light);
 }
 
 nav h2 {
   margin: 0;
+  font-size: 24px;
 }
 
 nav div {
@@ -17,23 +23,34 @@ nav div {
 
 nav a {
   text-decoration: none;
-  color: inherit;
+  color: var(--charcoal);
+  font-size: 15px;
 }
+
+nav a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 70vh;
-  padding: 60px;
+  padding: 80px 60px;
   gap: 60px;
+  background: var(--black);
 }
-
 .hero-content {
   max-width: 600px;
 }
 
 .hero-eyebrow {
+  color: var(--accent);
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -46,6 +63,7 @@ nav a {
 }
 
 .hero-description {
+  color: var(--muted);
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -55,8 +73,14 @@ nav a {
   padding: 14px 24px;
   border: none;
   border-radius: 8px;
+  background: var(--accent);
+  color: var(--white);
   font-size: 16px;
   cursor: pointer;
+}
+
+.hero button:hover {
+  background: var(--accent-dark);
 }
 
 .hero-visual {
@@ -68,4 +92,190 @@ nav a {
 
 .piano-placeholder {
   font-size: 180px;
+}
+
+
+/* =========================
+   LEARNING JOURNEY
+========================= */
+
+.learning-journey {
+  padding: 90px 60px;
+  background: var(--black-light);
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+
+.section-heading p {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-top: 15px;
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.lesson-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--cream);
+  border: 1px solid #e5dfd7;
+}
+
+.lesson-number {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lesson-card h3 {
+  font-size: 24px;
+  margin: 20px 0 10px;
+}
+
+.lesson-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.lesson-card button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--charcoal);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.lesson-card button:hover {
+  background: var(--accent);
+}
+
+/* =========================
+   PRACTICE
+========================= */
+
+.practice-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 90px 60px;
+  background: var(--black);
+}
+
+.practice-content {
+  max-width: 600px;
+}
+
+.practice-eyebrow {
+  color: var(--green-light);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.practice-content h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.practice-content > p:not(.practice-eyebrow) {
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.practice-content button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.practice-content button:hover {
+  background: var(--green-light);
+}
+
+.practice-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.keyboard-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 180px;
+  border: 1px solid var(--black-soft);
+  border-radius: 20px;
+  background: var(--black-card);
+  font-size: 100px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 60px;
+  background: var(--black-light);
+  border-top: 1px solid var(--black-soft);
+}
+
+.footer-brand h2 {
+  margin: 0 0 10px;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  margin: 35px 0;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--green-light);
+}
+
+.footer-bottom {
+  padding-top: 25px;
+  border-top: 1px solid var(--black-soft);
+}
+
+.footer-bottom p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0;
 }
