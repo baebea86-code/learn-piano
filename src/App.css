@@ -7,12 +7,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  background: var(--cream-light);
+  background: var(--black-light);
+  border-bottom: 1px solid var(--black-soft);
 }
 
 nav h2 {
   margin: 0;
   font-size: 24px;
+  color: var(--text);
 }
 
 nav div {
@@ -23,12 +25,13 @@ nav div {
 
 nav a {
   text-decoration: none;
-  color: var(--charcoal);
+  color: var(--text-muted);
   font-size: 15px;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: var(--green-light);
 }
 
 
@@ -45,12 +48,13 @@ nav a:hover {
   gap: 60px;
   background: var(--black);
 }
+
 .hero-content {
   max-width: 600px;
 }
 
 .hero-eyebrow {
-  color: var(--accent);
+  color: var(--green-light);
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -63,7 +67,7 @@ nav a:hover {
 }
 
 .hero-description {
-  color: var(--muted);
+  color: var(--text-muted);
   font-size: 20px;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -73,14 +77,15 @@ nav a:hover {
   padding: 14px 24px;
   border: none;
   border-radius: 8px;
-  background: var(--accent);
+  background: var(--green);
   color: var(--white);
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .hero button:hover {
-  background: var(--accent-dark);
+  background: var(--green-light);
 }
 
 .hero-visual {
@@ -110,7 +115,7 @@ nav a:hover {
 }
 
 .section-heading p {
-  color: var(--accent);
+  color: var(--green-light);
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -131,12 +136,18 @@ nav a:hover {
 .lesson-card {
   padding: 30px;
   border-radius: 16px;
-  background: var(--cream);
-  border: 1px solid #e5dfd7;
+  background: var(--black-card);
+  border: 1px solid var(--black-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.lesson-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
 }
 
 .lesson-number {
-  color: var(--accent);
+  color: var(--green-light);
   font-size: 14px;
   font-weight: bold;
 }
@@ -147,23 +158,26 @@ nav a:hover {
 }
 
 .lesson-card p {
-  color: var(--muted);
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
-.lesson-card button {
+.lesson-card a {
+  display: inline-block;
   margin-top: 20px;
   padding: 12px 18px;
-  border: none;
   border-radius: 8px;
-  background: var(--charcoal);
+  background: var(--green);
   color: var(--white);
+  text-decoration: none;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.lesson-card button:hover {
-  background: var(--accent);
+.lesson-card a:hover {
+  background: var(--green-light);
 }
+
 
 /* =========================
    PRACTICE
@@ -210,6 +224,7 @@ nav a:hover {
   color: var(--white);
   font-size: 16px;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .practice-content button:hover {
@@ -234,6 +249,86 @@ nav a:hover {
   background: var(--black-card);
   font-size: 100px;
 }
+
+
+/* =========================
+   LESSON PAGE
+========================= */
+
+.lesson-page {
+  min-height: 100vh;
+  padding: 80px 60px;
+  background: var(--black);
+}
+
+.lesson-page > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lesson-eyebrow {
+  color: var(--green-light);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.lesson-page h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.lesson-intro {
+  color: var(--text-muted);
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+.lesson-content {
+  padding: 35px;
+  border-radius: 16px;
+  background: var(--black-card);
+  border: 1px solid var(--black-soft);
+  margin-bottom: 35px;
+}
+
+.lesson-content h2 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.lesson-content p {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.lesson-content p:last-child {
+  margin-bottom: 0;
+}
+
+.lesson-page > button {
+  display: block;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lesson-page > button:hover {
+  background: var(--green-light);
+}
+
 
 /* =========================
    FOOTER
@@ -263,6 +358,7 @@ nav a:hover {
 .footer-links a {
   color: var(--text-muted);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
@@ -281,3 +377,300 @@ nav a:hover {
 }
 
 
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  nav {
+    padding: 20px 30px;
+  }
+
+  .hero,
+  .practice-section {
+    flex-direction: column;
+    padding: 70px 30px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-content,
+  .practice-content {
+    max-width: 700px;
+  }
+
+  .lesson-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-journey {
+    padding: 70px 30px;
+  }
+
+  .practice-content h2 {
+    font-size: 40px;
+  }
+
+  .lesson-page {
+    padding: 60px 30px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  nav div {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .piano-placeholder {
+    font-size: 120px;
+  }
+
+  .learning-journey,
+  .practice-section {
+    padding: 60px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .practice-content h2 {
+    font-size: 34px;
+  }
+
+  .keyboard-placeholder {
+    width: 100%;
+    height: 150px;
+    font-size: 80px;
+  }
+
+  .lesson-page {
+    padding: 50px 20px;
+  }
+
+  .lesson-page h1 {
+    font-size: 42px;
+  }
+
+  .lesson-intro {
+    font-size: 18px;
+  }
+
+  .lesson-content {
+    padding: 25px;
+  }
+
+  .lesson-content h2 {
+    font-size: 26px;
+  }
+
+  .footer {
+    padding: 50px 20px;
+  }
+}
+
+/* =========================
+   PIANO KEYBOARD
+========================= */
+
+.keyboard-section {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.keyboard-section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.keyboard-section > p {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.piano-keyboard {
+  display: flex;
+  width: 100%;
+  height: 220px;
+  background: var(--black-card);
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid var(--black-soft);
+}
+
+.piano-key {
+  flex: 1;
+  height: 100%;
+  border: 1px solid #222;
+  border-radius: 0 0 8px 8px;
+  background: #f5f5f5;
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.piano-key:hover {
+  background: #d8e8df;
+}
+
+.piano-key:active {
+  background: var(--green-light);
+  transform: translateY(3px);
+}
+
+.selected-note {
+  text-align: center;
+  color: var(--green-light);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.piano-key.active {
+  background: var(--green-light);
+  transform: translateY(3px);
+}
+
+/* =========================
+   LESSON ACTIVITY
+========================= */
+
+.lesson-activity {
+  max-width: 900px;
+  margin: 50px auto 35px;
+  padding: 35px;
+  border-radius: 16px;
+  background: var(--black-card);
+  border: 1px solid var(--black-soft);
+}
+
+.lesson-activity h2 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.lesson-activity > p:not(.lesson-eyebrow) {
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.activity-button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 35px;
+  border-radius: 16px;
+  background: var(--black-card);
+  border: 1px solid var(--black-soft);
+}
+
+.quiz-section h2 {
+  font-size: 32px;
+  margin: 15px 0 35px;
+}
+
+.quiz-question {
+  padding: 25px 0;
+  border-top: 1px solid var(--black-soft);
+}
+
+.quiz-question h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.quiz-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.quiz-option {
+  padding: 12px 20px;
+  border: 1px solid var(--black-soft);
+  border-radius: 8px;
+  background: var(--black);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.quiz-option:hover {
+  border-color: var(--green);
+}
+
+.quiz-option.selected {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+}
+
+.quiz-submit {
+  margin-top: 25px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quiz-result {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  background: var(--black);
+  border: 1px solid var(--green);
+}
+
+.quiz-result h3 {
+  margin-top: 0;
+}
+
+.quiz-result p {
+  color: var(--text-muted);
+}

@@ -7,7 +7,7 @@ function LessonCard({ number, title, description }) {
 
       <p>{description}</p>
 
-      <button>Start Lesson</button>
+      <a href="/lesson/1">Start Lesson</a>
     </div>
   );
 }
