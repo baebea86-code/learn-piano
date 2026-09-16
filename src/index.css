@@ -1,24 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --black: #0B0F0D;
-  --black-light: #121814;
-  --black-card: #18201B;
-  --black-soft: #202923;
+  /* Backgrounds */
+  --black:        #0D0D0D;
+  --black-light:  #141414;
+  --black-card:   #1A1A1A;
+  --black-soft:   #252525;
+  --black-border: #2E2E2E;
 
-  --green: #1F6B45;
-  --green-light: #2F8F5B;
+  /* Red accent — Pianote signature */
+  --red:          #E8192C;
+  --red-dark:     #C41020;
+  --red-muted:    #3D0A10;
 
-  --text: #F2F5F2;
-  --text-muted: #A8B2AB;
-  --white: #FFFFFF;
+  /* Text */
+  --text:         #FFFFFF;
+  --text-muted:   #A0A0A0;
+  --text-dim:     #666666;
+
+  --white:        #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   background: var(--black);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility: eyebrow label */
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+
+/* Utility: red pill badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--red-muted);
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(232, 25, 44, 0.3);
+}
+
+/* Utility: primary button */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  background: var(--red);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Utility: ghost / outline button */
+.btn-ghost {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid var(--black-border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--red);
+  color: var(--white);
 }

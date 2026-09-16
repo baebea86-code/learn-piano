@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PianoKeyboard from "../components/PianoKeyboard";
+import Navbar from "../components/Navbar";
 
 function Lesson() {
   const navigate = useNavigate();
@@ -28,10 +29,7 @@ function Lesson() {
   ];
 
   const handleAnswer = (questionIndex, answer) => {
-    setSelectedAnswers({
-      ...selectedAnswers,
-      [questionIndex]: answer,
-    });
+    setSelectedAnswers({ ...selectedAnswers, [questionIndex]: answer });
   };
 
   const checkQuiz = () => {
@@ -43,119 +41,104 @@ function Lesson() {
   }, 0);
 
   return (
-    <main className="lesson-page">
-      <p className="lesson-eyebrow">LESSON 01</p>
+    <div className="lesson-page">
+      <Navbar />
+      <div className="lesson-page-inner">
+        <p className="lesson-eyebrow">LESSON 01</p>
 
-      <h1>Meet Your Piano</h1>
+        <h1>Meet Your Piano</h1>
 
-      <p className="lesson-intro">
-        Before we play anything, let's get familiar with the instrument.
-      </p>
-
-      <section className="lesson-content">
-        <h2>Getting to know your keyboard</h2>
-
-        <p>
-          A piano keyboard is made up of white and black keys. Once you
-          understand how these keys are arranged, finding your notes becomes
-          much easier.
+        <p className="lesson-intro">
+          Before we play anything, let's get familiar with the instrument.
         </p>
 
-        <p>
-          Don't worry about memorising everything yet. We're going to take
-          this one step at a time.
-        </p>
-      </section>
-
-      <section className="keyboard-section">
-        <h2>Meet the keys</h2>
-
-        <p>
-          These are the seven natural notes you'll be learning first.
-          Click a key to explore it.
-        </p>
-
-        <PianoKeyboard />
-      </section>
-
-      <section className="lesson-activity">
-        <p className="lesson-eyebrow">TRY IT YOURSELF</p>
-
-        <h2>Can you find C?</h2>
-
-        <p>
-          Find the <strong>C</strong> key on the keyboard above and play it.
-        </p>
-
-        <button
-          className="activity-button"
-          onClick={() => setShowQuiz(true)}
-        >
-          I found C
-        </button>
-      </section>
-
-      {showQuiz && (
-        <section className="quiz-section">
-          <p className="lesson-eyebrow">QUICK CHECK</p>
-
-          <h2>Let's see what you remember.</h2>
-
-          {questions.map((question, questionIndex) => (
-            <div className="quiz-question" key={question.question}>
-              <h3>
-                {questionIndex + 1}. {question.question}
-              </h3>
-
-              <div className="quiz-options">
-                {question.options.map((option) => (
-                  <button
-                    key={option}
-                    className={
-                      selectedAnswers[questionIndex] === option
-                        ? "quiz-option selected"
-                        : "quiz-option"
-                    }
-                    onClick={() => handleAnswer(questionIndex, option)}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {!quizComplete && (
-            <button className="quiz-submit" onClick={checkQuiz}>
-              Check My Answers
-            </button>
-          )}
-
-          {quizComplete && (
-            <div className="quiz-result">
-              <h3>
-                You scored {score} / {questions.length}
-              </h3>
-
-              {score === questions.length ? (
-                <p>Perfect! 🎹 You're ready for the next lesson.</p>
-              ) : (
-                <p>
-                  Nice try! Review the lesson and give the quiz another shot.
-                </p>
-              )}
-            </div>
-          )}
+        <section className="lesson-content">
+          <h2>Getting to know your keyboard</h2>
+          <p>
+            A piano keyboard is made up of white and black keys. Once you
+            understand how these keys are arranged, finding your notes becomes
+            much easier.
+          </p>
+          <p>
+            Don't worry about memorising everything yet. We're going to take
+            this one step at a time.
+          </p>
         </section>
-      )}
 
-      <button
-  className="quiz-submit"
-  onClick={() => navigate("/lesson/2")}
->
-  Continue to Lesson 2
-</button>
-    </main>
+        <section className="keyboard-section">
+          <h2>Meet the keys</h2>
+          <p>
+            These are the seven natural notes you'll be learning first.
+            Click a key to explore it.
+          </p>
+          <PianoKeyboard />
+        </section>
+
+        <section className="lesson-activity">
+          <p className="lesson-eyebrow">TRY IT YOURSELF</p>
+          <h2>Can you find C?</h2>
+          <p>
+            Find the <strong>C</strong> key on the keyboard above and play it.
+          </p>
+          <button className="activity-button" onClick={() => setShowQuiz(true)}>
+            I found C
+          </button>
+        </section>
+
+        {showQuiz && (
+          <section className="quiz-section">
+            <p className="lesson-eyebrow">QUICK CHECK</p>
+            <h2>Let's see what you remember.</h2>
+
+            {questions.map((question, questionIndex) => (
+              <div className="quiz-question" key={question.question}>
+                <h3>
+                  {questionIndex + 1}. {question.question}
+                </h3>
+                <div className="quiz-options">
+                  {question.options.map((option) => (
+                    <button
+                      key={option}
+                      className={
+                        selectedAnswers[questionIndex] === option
+                          ? "quiz-option selected"
+                          : "quiz-option"
+                      }
+                      onClick={() => handleAnswer(questionIndex, option)}
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            {!quizComplete && (
+              <button className="quiz-submit" onClick={checkQuiz}>
+                Check My Answers
+              </button>
+            )}
+
+            {quizComplete && (
+              <div className="quiz-result">
+                <h3>
+                  You scored {score} / {questions.length}
+                </h3>
+                {score === questions.length ? (
+                  <p>Perfect! 🎹 You're ready for the next lesson.</p>
+                ) : (
+                  <p>Nice try! Review the lesson and give the quiz another shot.</p>
+                )}
+              </div>
+            )}
+          </section>
+        )}
+
+        <button className="quiz-submit" onClick={() => navigate("/lesson/2")}>
+          Continue to Lesson 2 →
+        </button>
+      </div>
+    </div>
   );
 }
 
