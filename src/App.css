@@ -674,3 +674,70 @@ nav a:hover {
 .quiz-result p {
   color: var(--text-muted);
 }
+
+/* =========================
+   NOTE SEQUENCE
+========================= */
+
+.note-sequence {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.note-sequence span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background: var(--black);
+  border: 1px solid var(--black-soft);
+  color: var(--green-light);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* =========================
+   FINGER GUIDE
+========================= */
+
+.finger-guide {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+.finger-guide div {
+  width: 100px;
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 12px;
+  background: var(--black);
+  border: 1px solid var(--black-soft);
+}
+
+.finger-guide span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.finger-guide p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}

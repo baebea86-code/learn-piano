@@ -7,6 +7,8 @@ import LearningJourney from "./components/LearningJourney";
 import PracticeSection from "./components/PracticeSection";
 import Footer from "./components/Footer";
 import Lesson from "./pages/Lesson";
+import Lesson2 from "./pages/Lesson2";
+import Lesson3 from "./pages/Lesson3";
 
 function Home() {
   return (
@@ -26,6 +28,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lesson/1" element={<Lesson />} />
+        <Route path="/lesson/2" element={<Lesson2 />} />
+        <Route path="/lesson/3" element={<Lesson3 />} />
       </Routes>
     </BrowserRouter>
   );

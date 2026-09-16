@@ -14,18 +14,21 @@ function LearningJourney() {
           number="01"
           title="Meet Your Piano"
           description="Get familiar with the layout of your keyboard."
+          link="/lesson/1"
         />
 
         <LessonCard
           number="02"
           title="Find Your Notes"
           description="Learn how to find C, D, E, F, G, A and B."
+          link="/lesson/2"
         />
 
         <LessonCard
           number="03"
           title="Meet Your Fingers"
           description="Learn finger numbers and your basic hand position."
+          link="/lesson/3"
         />
       </div>
     </section>

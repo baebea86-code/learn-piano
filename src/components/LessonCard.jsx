@@ -1,4 +1,4 @@
-function LessonCard({ number, title, description }) {
+function LessonCard({ number, title, description, link }) {
   return (
     <div className="lesson-card">
       <p className="lesson-number">{number}</p>
@@ -7,7 +7,7 @@ function LessonCard({ number, title, description }) {
 
       <p>{description}</p>
 
-      <a href="/lesson/1">Start Lesson</a>
+      <a href={link}>Start Lesson</a>
     </div>
   );
 }
