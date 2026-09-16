@@ -741,3 +741,138 @@ nav a:hover {
   color: var(--text-muted);
   font-size: 14px;
 }
+
+ /* =========================
+    PROGRESS PAGE
+ ========================= */
+
+.progress-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.progress-page > h1 {
+  font-size: 52px;
+  margin: 10px 0 15px;
+}
+
+.progress-page .lesson-intro {
+  margin-bottom: 50px;
+}
+
+.progress-overview {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 35px;
+  margin-bottom: 40px;
+  border-radius: 18px;
+  background: var(--black-card);
+  border: 1px solid var(--black-soft);
+}
+
+.progress-circle {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 8px solid var(--green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle strong {
+  font-size: 30px;
+  color: var(--green-light);
+}
+
+.progress-circle span {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.progress-overview h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.progress-overview p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.progress-lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.progress-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+  border-radius: 14px;
+  background: var(--black-card);
+  border: 1px solid var(--black-soft);
+}
+
+.progress-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: bold;
+}
+
+.progress-card div {
+  flex: 1;
+}
+
+.progress-card h3 {
+  margin: 0 0 7px;
+  font-size: 20px;
+}
+
+.progress-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.progress-card > strong {
+  color: var(--text-muted);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.progress-page {
+  padding: 60px 20px;
+}
+
+.progress-page > h1 {
+  font-size: 40px;
+}
+
+.progress-overview {
+  flex-direction: column;
+  text-align: center;
+}
+
+.progress-card {
+  gap: 15px;
+}
+
+.progress-card > strong {
+  display: none;
+}

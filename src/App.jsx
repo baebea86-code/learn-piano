@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Lesson from "./pages/Lesson";
 import Lesson2 from "./pages/Lesson2";
 import Lesson3 from "./pages/Lesson3";
+import Progress from "./pages/Progress";
 
 function Home() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/lesson/1" element={<Lesson />} />
         <Route path="/lesson/2" element={<Lesson2 />} />
         <Route path="/lesson/3" element={<Lesson3 />} />
+        <Route path="/progress" element={<Progress />} />
       </Routes>
     </BrowserRouter>
   );

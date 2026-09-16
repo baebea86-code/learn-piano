@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PianoKeyboard from "../components/PianoKeyboard";
 
 function Lesson3() {
+  const navigate = useNavigate();
   const [showQuiz, setShowQuiz] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [quizComplete, setQuizComplete] = useState(false);
@@ -159,7 +161,12 @@ function Lesson3() {
         </section>
       )}
 
-      <button>Continue</button>
+      <button
+  className="quiz-submit"
+  onClick={() => navigate("/progress")}
+>
+  Finish Learning Journey
+</button>
     </main>
   );
 }
