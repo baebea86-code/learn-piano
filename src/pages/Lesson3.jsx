@@ -146,8 +146,8 @@ function Lesson3() {
           </section>
         )}
 
-        <button className="quiz-submit" onClick={() => navigate("/progress")}>
-          Finish Learning Journey →
+        <button className="quiz-submit" onClick={() => navigate("/lesson/4")}>
+          Continue to Lesson 4 →
         </button>
       </div>
     </div>

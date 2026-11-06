@@ -34,10 +34,28 @@ function LearningJourney() {
             description="Learn finger numbers and establish your basic hand position for playing."
             link="/lesson/3"
           />
+          <LessonCard
+            number="04"
+            title="Understanding Your Number System"
+            description="Discover how finger numbers guide your playing and make reading exercises easy."
+            link="/lesson/4"
+          />
+          <LessonCard
+            number="05"
+            title="Understanding Scales"
+            description="Learn what scales are and how to play the C major scale up and down the keyboard."
+            link="/lesson/5"
+          />
+          <LessonCard
+            number="06"
+            title="Playing Your First Song"
+            description="Put everything together and play Mary Had a Little Lamb — your first real piece."
+            link="/lesson/6"
+          />
         </div>
 
         <div className="journey-footer">
-          <span className="journey-footer-text">3 lessons · self-paced · free to start</span>
+          <span className="journey-footer-text">6 lessons · self-paced · free to start</span>
         </div>
       </div>
     </section>
